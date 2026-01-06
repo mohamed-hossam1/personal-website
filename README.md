@@ -1,57 +1,79 @@
-# Calvino – Personal Portfolio (HTML/CSS)
 
-A modern, responsive portfolio landing page for a digital product designer/developer. Built with semantic **HTML5** and **CSS3** (no frameworks required). Includes a sticky navbar, hero section, expertise cards, works/gallery grid, about/skills with progress bars, testimonial, and a clean footer. A scroll‑to‑top FAB is included in vanilla HTML/CSS.
 
-> Live Demo (example): Deploy with GitHub Pages or Netlify. (Instructions below)
+# Calvin - Digital Product Designer Portfolio
 
----
+A modern, responsive portfolio website for Calvin, a digital product designer. This site showcases Calvin's expertise, work portfolio, and professional information with a clean, contemporary design.
 
-## ✨ Features
+## Features
 
-* **Hero Section** with profile image, name/title, phone, and email blocks.
-* **Expertise Cards** (4 styles) with SVG icons and hover effects.
-* **Works/Gallery Grid** for project thumbnails.
-* **About Me** section with quote and **skills progress bars**.
-* **Testimonial** block.
-* **Footer** with social links, quick nav, and download/contact buttons.
-* **Responsive layout** using CSS Grid & Flexbox.
+- **Responsive Design**: Fully responsive layout that works seamlessly across all devices
+- **Navigation**: Clean navigation bar with call-to-action button
+- **Hero Section**: Eye-catching hero section with personal introduction
+- **Expertise Cards**: Interactive cards showcasing different areas of expertise
+- **Portfolio Gallery**: Visual gallery of recent work
+- **About Me**: Personal introduction with skill progress bars
+- **Testimonial**: Client testimonial section
+- **Footer**: Comprehensive footer with social links and navigation
+- **Scroll-to-Top**: Convenient scroll-to-top button
 
----
+## Technologies Used
 
-## 🧱 Tech Stack
+- **HTML5**: Semantic markup for structure
+- **CSS3**: Modern styling with custom CSS
+- **JavaScript**: Interactive functionality
+- **Font Awesome**: Icon library
+- **Bootstrap**: JavaScript components (Popper.js, Bootstrap JS)
 
-* **HTML5** (semantic structure)
-* **CSS3** (Flexbox, Grid, transitions, animations)
-* **Font Awesome** (CDN) for icons
-* **SVG** inline icons in cards
----
-
-## 📁 Folder Structure
+## Project Structure
 
 ```
-project-root/
-├─ images/
-│  ├─ logo.png
-│  ├─ empolye.png
-│  ├─ gallery1.png
-│  ├─ gallery2.png
-│  ├─ gallery3.png
-│  └─ gallery4.png
-├─ index.html
-├─ style.css
-└─ README.md
+├── index.html      # Main portfolio page
+├── style.css       # Main stylesheet
+├── images/         # Image assets
+│   ├── logo.png
+│   ├── empolye.png
+│   ├── gallery1.png - gallery4.png
+│   └── favicon.ico
+└── README.md       # This file
 ```
 
+## Sections
 
----
+1. **Navigation**: Logo, menu items, and "Let's Talk" button
+2. **Hero Section**: Personal introduction with photo and contact info
+3. **Expertise**: Four expertise cards with icons and descriptions
+4. **Works**: Portfolio gallery showcasing recent projects
+5. **About Me**: Personal description and skill visualization
+6. **Testimonial**: Client feedback
+7. **Footer**: Contact information, social links, and site navigation
 
-## 🚀 Getting Started (Local)
+## Demo
 
-1. **Clone** the repository
+View the live demo at: https://sensational-gaufre-0eec5f.netlify.app/
 
+## Setup and Installation
+
+1. Clone the repository:
    ```bash
    git clone https://github.com/mohamed-hossam1/personal-website.git
-   cd <personal-website>
    ```
-2. **Open** `index.html` directly in your browser **or** use VS Code **Live Server** extension for auto‑reload.
 
+2. Navigate to the project directory:
+   ```bash
+   cd personal-website
+   ```
+
+3. Open `index.html` in your browser to view the site
+
+## Customization
+
+- Update personal information in the hero section
+- Replace portfolio images in the `images/` directory
+- Modify skill percentages in the about section
+- Update contact information and social links
+- Customize colors and styles in `style.css`
+
+
+## Contact
+
+For inquiries or collaboration opportunities, please use the contact information provided on the website.
