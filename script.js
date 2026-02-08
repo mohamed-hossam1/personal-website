@@ -5,7 +5,7 @@ const observerOptions = {
 };
 
 const observer = new IntersectionObserver(function(entries) {
-    entries.forEach((entry, index) => {
+    entries.forEach((entry) => {
         if (entry.isIntersecting) {
             if (entry.target.classList.contains('progress-bar-fill')) {
                 const width = entry.target.style.width;
@@ -19,14 +19,14 @@ const observer = new IntersectionObserver(function(entries) {
                 setTimeout(() => {
                     entry.target.style.opacity = '1';
                     entry.target.style.animation = `fadeInUp 0.6s ease-out forwards`;
-                }, index * 80);
+                }, 80);
             }
             
             if (entry.target.classList.contains('works-cards')) {
                 setTimeout(() => {
                     entry.target.style.opacity = '1';
                     entry.target.style.animation = `fadeInUp 0.6s ease-out forwards`;
-                }, index * 80);
+                }, 80);
             }
             
             if (entry.target.tagName === 'H2') {
@@ -41,8 +41,15 @@ const observer = new IntersectionObserver(function(entries) {
                 entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
             }
             
+            // Fix للـ footer
             if (entry.target.classList.contains('footer')) {
+                // امسح أي animation قديمة
+                entry.target.style.animation = 'none';
+                // force reflow
+                void entry.target.offsetHeight;
+                // حط الـ animation من جديد
                 entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
+                entry.target.style.opacity = '1';
             }
             
             if (entry.target.classList.contains('hero-section')) {
@@ -60,6 +67,40 @@ const observer = new IntersectionObserver(function(entries) {
         }
     });
 }, observerOptions);
+
+window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.experties-cards').forEach((el) => {
+        el.style.opacity = '0';
+        observer.observe(el);
+    });
+    
+    document.querySelectorAll('.works-cards').forEach((el) => {
+        el.style.opacity = '0';
+        observer.observe(el);
+    });
+    
+    document.querySelectorAll('.progress-bar-fill').forEach(el => {
+        observer.observe(el);
+    });
+    
+    document.querySelectorAll('.experties h2, .works h2, .about-me h2, .testimonial h2').forEach(el => {
+        observer.observe(el);
+    });
+    
+    document.querySelectorAll('.about, .testimonial, .hero-section').forEach(el => {
+        observer.observe(el);
+    });
+    
+    document.querySelectorAll('.footer').forEach(el => {
+        el.style.opacity = '0';
+        observer.observe(el);
+    });
+    
+    document.querySelectorAll('.skill').forEach((el, index) => {
+        el.style.animationDelay = (0.2 + index * 0.1) + 's';
+        observer.observe(el);
+    });
+});
 
 window.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.experties-cards').forEach((el, index) => {
